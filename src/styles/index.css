@@ -16,6 +16,7 @@ body {
     animation-delay: 0s, 2.5s;
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, both;
+    color: #fff;
 }
 
 html {

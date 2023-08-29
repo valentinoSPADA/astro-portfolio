@@ -101,7 +101,7 @@ a {
         transition: .5s;
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
-        z-index: -1;
+        z-index: -5;
     }
 
     .nav-button {
@@ -181,8 +181,8 @@ a {
     }
 
     .in-view-nav {
+        z-index: 100;
         background-color: #00000069;
-        z-index: 3;
     }
 
     .sections-nav-container {
