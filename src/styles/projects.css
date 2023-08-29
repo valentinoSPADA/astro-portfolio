@@ -185,7 +185,6 @@
 
     .platform-stack-container-mobile {
         display: flex;
-        height: 210px;
         justify-content: end;
         align-items: start;
         margin-right: 10px;
