@@ -10,7 +10,7 @@
     ],
     "start_url": ".",
     "background_color": "rgb(38, 33, 33)",
-    "theme_color": "#eb4d4b",
+    "theme_color": "black",
     "description": "Portfolio App About Valentino Spada",
     "display": "standalone"
 }
