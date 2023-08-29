@@ -19,6 +19,11 @@ body {
     color: #fff;
 }
 
+.p-class {
+    color: transparent;
+    position: absolute;
+}
+
 html {
     scroll-behavior: smooth;
 }
