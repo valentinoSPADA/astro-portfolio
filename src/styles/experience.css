@@ -38,6 +38,7 @@
 
 .date {
     background-color: #eb4d4b;
+    color: black;
     width: 20ch;
     text-align: center;
     font-weight: bold;
@@ -142,6 +143,7 @@
         margin: auto;
         margin-top: 10px;
         background-color: transparent;
+        color: white;
         font-size: small;
     }
 

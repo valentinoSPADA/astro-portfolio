@@ -1,0 +1,16 @@
+{
+    "name": "Valentino Spada Portfolio",
+    "short_name": "VSpada Portfolio",
+    "icons": [
+        {
+            "src": "logo.png",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "background_color": "rgb(38, 33, 33)",
+    "theme_color": "#eb4d4b",
+    "description": "Portfolio App About Valentino Spada",
+    "display": "standalone"
+}

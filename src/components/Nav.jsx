@@ -76,27 +76,27 @@ function Nav() {
       {
         <nav className={'nav-container ' + (open ? ' in-view-nav' : '')} onClick={() => setOpen(false)}>
           <ul className={'list-container ' + (open ? ' in-view' : '')}>
-            <section className="sections-nav-container">
+            <li className="sections-nav-container">
               {
                 items.map((item) => {
                   return (
                     item.href !== "#lobby" ?
-                      <li className="item" key={item.href} onClick={() => onSelect(item)}>
+                      <span className="item" key={item.href} onClick={() => onSelect(item)}>
                         <a className={"nav " + (item.selected ? "selected" : "")} href={item.href}>{item.name}</a>
-                      </li> : null
+                      </span> : null
                   )
                 })}
-            </section>
-            <section className="sections-nav-container center-container">
+            </li>
+            <li className="sections-nav-container center-container">
               {items.map((item) => {
                 return (
                   item.href === "#lobby" ?
-                    <li className="item" key={item.href} onClick={() => onSelect(item)}>
+                    <span className="item" key={item.href} onClick={() => onSelect(item)}>
                       <a className={"nav " + (item.selected ? "selected" : "")} href={item.href}>{item.name}</a>
-                    </li> : null
+                    </span> : null
                 )
               })}
-            </section>
+            </li>
           </ul>
         </nav>
       }

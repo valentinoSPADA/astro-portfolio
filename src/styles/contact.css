@@ -198,11 +198,11 @@
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
     box-sizing: border-box;
-    color: #fff;
+    color: black;
     cursor: pointer;
     font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     outline: none;
     outline: 0;
     padding: 10px 25px;

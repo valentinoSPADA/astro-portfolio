@@ -12,19 +12,25 @@ import Contact from "../components/Contact.jsx";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Portfolio Web About Valentino Spada as a Front End Developer"
+    />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <title>Portfolio</title>
   </head>
   <body>
     <Welcome />
     <Landing />
-    <Nav client:load/>
+    <Nav client:load />
     <About />
     <Experience />
     <Habilities />
-    <Contact client:load/>
+    <Contact client:load />
     <footer class="footer">
       Valentino Spada 2023. Todos los derechos reservados.
     </footer>

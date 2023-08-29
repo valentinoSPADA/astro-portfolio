@@ -27,12 +27,12 @@ function Projects() {
             <ul className="projects-items-container">
                 {items?.map((item, index) => {
                     return (
-                        <div className='div-item' key={index} onClick={() => onSelect(index)}>
+                        <li className='div-item' key={index} onClick={() => onSelect(index)}>
                             <span className={`line ${item.selected ? 'selected' : ''}`}></span>
-                            <li key={index} className={`p-title ${item.selected ? 'selected' : ''}`}>
+                            <span key={index} className={`p-title ${item.selected ? 'selected' : ''}`}>
                                 {item.name}
-                            </li>
-                        </div>
+                            </span>
+                        </li>
                     )
                 })}
             </ul>
