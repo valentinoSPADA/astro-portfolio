@@ -1,0 +1,193 @@
+.nav-container {
+    z-index: 3;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    font-size: x-large;
+    top: 0;
+    bottom: 10px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: adjust-navbar linear both;
+    animation-timeline: scroll();
+    animation-range: calc(100vh - 100px) 100vh;
+}
+
+.list-container {
+    width: 920px;
+    height: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sections-nav-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.center-container {
+    width: 174px;
+}
+
+.item {
+    text-align: center;
+    list-style: none;
+}
+
+.nav:hover {
+    background-position: left bottom;
+}
+
+.nav {
+    font-weight: 700;
+    background: linear-gradient(to left, white 50%, #eb4d4b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-clip: text;
+    transition: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav.selected {
+    background-position: left bottom;
+}
+
+@keyframes adjust-navbar {
+    to {
+        height: 60px;
+        font-size: medium;
+    }
+
+}
+
+@keyframes adjust-navbar-mobile {
+    to {
+        height: 40px;
+        font-size: x-small;
+    }
+
+}
+
+.nav-button {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        position: fixed;
+        animation: none;
+        height: 100vh;
+        justify-content: start;
+        background-color: #00000000;
+        transition: .5s;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        z-index: -1;
+    }
+
+    .nav-button {
+        position: fixed;
+        display: block;
+        z-index: 4;
+        top: 10px;
+        right: 10px;
+        width: 46px;
+        height: 46px;
+        background-color: transparent;
+        border: none;
+        transition: .5s;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        animation: .5s slidein 2.15s both;
+    }
+
+    .hamburger-1 {
+        display: flex;
+        width: 100%;
+        height: 3px;
+        background-color: #eb4d4b;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transition: .5s;
+    }
+
+    .hamburger-2 {
+        display: flex;
+        width: 100%;
+        height: 3px;
+        background-color: #eb4d4b;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: .5s;
+    }
+
+    .hamburger-3 {
+        display: flex;
+        width: 100%;
+        height: 3px;
+        background-color: #eb4d4b;
+        border-radius: 5px;
+        transition: .5s;
+    }
+
+    .hamburger-1.close {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+
+    .hamburger-3.close {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hamburger-2.close {
+        transform: scale(-0.8);
+        background-color: transparent;
+    }
+
+    .list-container {
+        background-color: #2e2e2e;
+        height: 100vh;
+        width: calc(100vw - 100px);
+        justify-content: start;
+        flex-direction: column-reverse;
+        gap: 25px;
+        padding-top: 86px;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    .in-view {
+        transform: translateX(0);
+    }
+
+    .in-view-nav {
+        background-color: #00000069;
+        z-index: 3;
+    }
+
+    .sections-nav-container {
+        flex-direction: column;
+    }
+
+
+}

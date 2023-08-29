@@ -1,0 +1,216 @@
+.projects {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 41px;
+}
+
+.projects-subtitle {
+    background-color: #eb4d4b;
+    max-width: fit-content;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    padding: 2px 5px;
+}
+
+.projects-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.projects-items-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.title-container {
+    grid-column: 1 / 4;
+}
+
+.div-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: fit-content;
+    gap: 5px;
+    transition: all .3s;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.line {
+    background-color: white;
+    height: 2px;
+    width: 10px;
+    transition: all .3s;
+}
+
+.platform-description-container {
+    min-height: 350px;
+    position: relative;
+}
+
+.p-title {
+    font-weight: 500;
+    background: linear-gradient(to left, white 50%, #eb4d4b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-clip: text;
+    transition: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.p-title.selected {
+    background-position: left bottom;
+}
+
+.line.selected {
+    background-color: #eb4d4b;
+    width: 60px;
+}
+
+.div-item:hover .line.selected {
+    width: 60px;
+}
+
+.div-item:hover .line {
+    width: 40px;
+}
+
+.div-item:hover .p-title {
+    background-position: left bottom;
+}
+
+.platform-stack-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.stack-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.stack-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+
+.stack-list {
+    list-style: none;
+    padding: 0;
+}
+
+.stack-li {
+    background-color: #eb4d4b;
+    max-width: fit-content;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 2px 5px;
+}
+
+.delay-0 {
+    animation: 0.3s desc-animation 0s both;
+}
+
+.delay-1 {
+    animation: 0.3s desc-animation 0.05s both;
+}
+
+.delay-2 {
+    animation: 0.3s desc-animation 0.1s both;
+}
+
+.delay-3 {
+    animation: 0.3s desc-animation 0.15s both;
+}
+
+.delay-4 {
+    animation: 0.3s desc-animation 0.2s both;
+}
+
+.platform-stack-container-mobile {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .hability-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title-container {
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
+    .projects-subtitle {
+        margin: 0 auto;
+    }
+
+    .platform-description-container {
+        margin: auto;
+        grid-column: 1 / 3;
+        height: 500px;
+        padding: 10px;
+        width: calc(100vw - 30px);
+    }
+
+    .stack-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .platform-stack-container-mobile {
+        display: flex;
+        height: 210px;
+        justify-content: end;
+        align-items: start;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+
+    .stack-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .stack-li {
+        margin: 0;
+        font-weight: 500;
+        font-size: small;
+    }
+    
+    .stack-title {
+        text-align: start;
+    }
+
+    .projects-items-container {
+        margin-bottom: 16px;
+    }
+
+    .platform-stack-container {
+        display: none;
+    }
+}

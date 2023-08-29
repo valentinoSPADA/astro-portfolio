@@ -1,0 +1,151 @@
+.main {
+    max-width: 920px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.about-section {
+    animation: .5s slidein 2s both;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 100px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+}
+
+.title-center {
+    font-size: 100px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.surname {
+    color: #eb4d4b;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 26px;
+}
+
+.profile-section {
+    margin-left: 30px;
+    animation: .5s slidein 2.15s both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 6px #eb4d4b;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.linkedin-icon {
+    fill: white;
+}
+
+.icon-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.linkedin {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .3s;
+}
+
+.icon-container:hover {
+    transform: scale(1.3);
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundAnimate {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main {
+        flex-direction: column-reverse;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        padding: 0;
+        margin: 0 12px;
+        margin-bottom: 10px;
+    }
+
+    .profile-section {
+        flex-direction: column-reverse;
+        animation: .5s slidein 2s both;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .about-section {
+        animation: .5s slidein 2.15s both;
+    }
+}

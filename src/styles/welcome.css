@@ -1,0 +1,104 @@
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: .1s displayOff 2.5s both;
+    overflow-x: hidden;
+}
+
+.a-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: 1s welcomeAnimationA 1.5s both;
+}
+
+.b-div {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: 1s welcomeAnimationB 1.5s both;
+}
+
+.text-title {
+    color: #eb4d4b;
+    font-size: 130px;
+    font-weight: 400;
+    z-index: 5;
+    position: absolute;
+    animation: 1.5s welcomeAnimation .25s both;
+}
+
+@keyframes welcomeAnimationA {
+    0% {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+@keyframes welcomeAnimationB {
+    0% {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+        display: none;
+    }
+}
+
+@keyframes welcomeAnimation {
+    0% {
+        display: flex;
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    40% {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    60% {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes displayOff {
+    0% {
+        display: flex;
+    }
+
+    100% {
+        top: -100vh;
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .text-title {
+        font-size: 70px;
+    }
+}

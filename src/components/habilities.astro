@@ -1,0 +1,67 @@
+---
+import "../styles/habilities.css";
+import habilities from "../assets/habilitiesMock";
+import { Icon } from "astro-icon";
+---
+
+<main id="habilities" class="main-habilities">
+  <div class="title-center"><span class="surname">H</span>abilidades</div>
+  <div class="content">
+    <ul class="hability-list">
+      {
+        habilities?.map((hability, index) => {
+          return (
+            <li class={`hability icon-animation-${index}`} data-index={index}>
+              <a href={hability.url} target="_blank">
+                <span class="icons">
+                  <Icon name={hability.icon} />
+                </span>
+                <p>{hability.name}</p>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-containers">
+        <p class="text-bold">SCRUM</p>
+        <p>|</p>
+        <p>Liderazgo</p>
+        <p>|</p>
+        <p>Jira</p>
+        <p>|</p>
+        <p>Trabajo en Equipo</p>
+        <p>|</p>
+        <p>Proactividad</p>
+        <p>|</p>
+        <p>Creatividad</p>
+        <p>|</p>
+        <p>Adaptabilidad</p>
+        <p>|</p>
+        <p>Ingles</p>
+        <p>|</p>
+      </div>
+      <div class="carousel-containers">
+        <p class="text-bold">SCRUM</p>
+        <p>|</p>
+        <p>Liderazgo</p>
+        <p>|</p>
+        <p>Jira</p>
+        <p>|</p>
+        <p>Trabajo en Equipo</p>
+        <p>|</p>
+        <p>Proactividad</p>
+        <p>|</p>
+        <p>Creatividad</p>
+        <p>|</p>
+        <p>Adaptabilidad</p>
+        <p>|</p>
+        <p>Ingles</p>
+        <p>|</p>
+      </div>
+    </div>
+  </div>
+</main>

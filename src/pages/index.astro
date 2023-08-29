@@ -1,0 +1,29 @@
+---
+import Nav from "../components/Nav.jsx";
+import Welcome from "../components/welcome.astro";
+import Landing from "../components/landing.astro";
+import About from "../components/about.astro";
+import "../styles/index.css";
+import Experience from "../components/experience.astro";
+import Habilities from "../components/habilities.astro";
+import Contact from "../components/Contact.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <Welcome />
+    <Landing />
+    <Nav client:load/>
+    <About />
+    <Experience />
+    <Habilities />
+    <Contact client:load/>
+  </body>
+</html>

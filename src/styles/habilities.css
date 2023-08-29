@@ -1,0 +1,51 @@
+.main-habilities {
+    height: 100vh;
+    padding-top: 80px;
+    color: white;
+}
+
+.hability-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    max-width: 50px;
+    max-height: 34px;
+    height: 34px;
+    margin: auto;
+    fill: black;
+}
+
+.hability:hover {
+    transform: scale(1.5);
+}
+
+.hability {
+    border-radius: 10px;
+    padding: 10px 5px 5px 5px;
+    transition: 0.3s;
+}
+
+.hability p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .hability-list {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .main-habilities {
+        padding-top: 12px;
+    }
+}

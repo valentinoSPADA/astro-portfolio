@@ -1,0 +1,41 @@
+---
+import "../styles/experience.css";
+import Projects from "./Projects";
+---
+
+<main id="experience" class="main-experience">
+  <div class="title-center">
+    <span class="surname">E</span>xperiencia</div>
+  <div class="main-experience-content">
+    <section class="intro-section">
+      <div class="company-container">
+        <div class="company">
+          <a
+            href="https://primary.com.ar/"
+            target="_blank"
+            class="experience-title"
+          >
+            Primary <span class="surname">SA</span>
+          </a>
+          <p class="date">04/2022 - ACTUALIDAD</p>
+        </div>
+      </div>
+      <div>
+        <p class="experience-subtitle">
+          <span class="text-bold">Primary SA</span> es una empresa perteneciente
+          al grupo
+          <span class="text-bold">Matba Rofex</span> (<span class="text-italic"
+            >Mercado de futuros de Argentina</span
+          >). Nos dedicamos a <span class="text-bold">desarrollar software</span
+          > que es utilizado por la mayoria de las <span class="text-bold"
+            >ALyCs Argentinas</span
+          > abarcando el <span class="text-bold">100%</span> de las que operan con
+          nuestro mercado.
+        </p>
+      </div>
+    </section>
+    <section class="project-section">
+      <Projects client:load />
+    </section>
+  </div>
+</main>

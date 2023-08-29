@@ -1,0 +1,238 @@
+.main-about {
+    padding-top: 80px;
+    height: 100vh;
+    color: white;
+}
+
+.flex-center {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 420px);
+    max-width: 920px;
+    width: 100%;
+    margin: auto;
+}
+
+.image-container-2 {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid 6px #eb4d4b;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skyline-image {
+    box-shadow: inset -10px 0px 40px #000;
+    border-radius: 4px;
+    background-image: url(../images/skyline.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.text-section {
+    width: 50ch;
+    height: 420px;
+    padding: 30px;
+    font-size: large;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.text-about {
+    margin: 6px 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.text-bold {
+    color: #eb4d4b;
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-underlined:hover {
+    background-position: left bottom;
+}
+
+.text-underlined {
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(to left, white 50%, #eb4d4b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: .3s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.more-dark {
+    color: rgb(230, 230, 230);
+}
+
+.buble {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    filter: blur(20px);
+    mix-blend-mode: lighten;
+    opacity: 0.4;
+}
+
+.buble-1 {
+    left: 20%;
+    bottom: 10px;
+    background-color: #b66100;
+    animation: scale-buble 7s infinite 1s;
+}
+
+.buble-2 {
+    left: 40%;
+    background-color: #686de0;
+    animation: scale-buble-2 7s infinite 2s;
+}
+
+.buble-3 {
+    background-color: #4834d4;
+    animation: scale-buble 7s infinite;
+}
+
+.carousel-containers {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: large;
+}
+
+.carousel-containers p {
+    margin: 0;
+    padding: 5px;
+}
+
+.carousel {
+    border: solid 1px #eb4d4b;
+    display: flex;
+    width: 200%;
+    position: absolute;
+    left: 0;
+    animation: infinite-carousel 12s linear infinite;
+}
+
+.carousel-container {
+    margin: auto;
+    max-width: 920px;
+    width: 100%;
+    height: 38px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes infinite-carousel {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes scale-buble {
+    0% {
+        transform: scale(1) translate(0px, 0px);
+    }
+
+    33% {
+        transform: scale(1.1) translate(30px, -50px);
+    }
+
+    66% {
+        transform: scale(0.9) translate(-20px, 20px);
+    }
+
+    100% {
+        transform: scale(1) translate(0px, 0px);
+    }
+}
+
+@keyframes scale-buble-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(1.1);
+    }
+
+    66% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin-top: 12px;
+        flex-direction: column;
+        justify-content: start;
+        height: auto;
+    }
+
+    .title-center {
+        font-size: 48px;
+    }
+
+    .text-section {
+        padding: 10px;
+        width: calc(100vw - 80px);
+        height: auto;
+        z-index: 0;
+    }
+
+    .buble {
+        width: 180px;
+        height: 180px;
+    }
+
+    .image-container-2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .carousel-container {
+        display: none;
+    }
+
+    .main-about {
+        padding-top: 12px;
+        height: max-content;
+        min-height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .carousel-container {
+        display: none;
+    }
+}
