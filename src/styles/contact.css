@@ -1,6 +1,6 @@
 .main-contact {
     padding-top: 80px;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
 }
 
@@ -231,6 +231,15 @@
     }
 
     .main-contact {
+        height: 70vh;
         padding-top: 12px;
+    }
+
+    .content-contact {
+        height: 60vh;
+    }
+
+    .form {
+        margin: auto;
     }
 }

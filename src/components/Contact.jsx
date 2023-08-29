@@ -33,7 +33,7 @@ function Contact() {
             <div className="title-center">
                 <span className="surname">C</span>ontacto
             </div>
-            <section className='content'>
+            <section className='content content-contact'>
                 <form className='form' ref={form} onSubmit={(e) => sendEmail(e)}>
                     <div className="field field_v1">
                         <input className="field__input" name='fullName' value={input.fullName} onChange={handleInputChange} type='text' placeholder="Ej.: Valentino Spada" />
@@ -56,6 +56,7 @@ function Contact() {
 
                 </form>
             </section>
+
         </main>
     )
 }
