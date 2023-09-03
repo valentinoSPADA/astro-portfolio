@@ -2,7 +2,7 @@ export const projects = [
     {
         name: 'Matriz',
         tecnologies: ['React', 'TypeScript', 'MobX', 'antDesign'],
-        selected: false
+        selected: true
     }, {
         name: 'OMS',
         tecnologies: ['Angular', 'TypeScript', 'MaterialUI'],
