@@ -172,6 +172,7 @@
     padding: 0 1rem;
     max-width: 1200px;
     max-height: 330px;
+    resize: vertical;
 }
 
 .textarea:focus {
